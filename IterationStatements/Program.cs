@@ -15,10 +15,10 @@ namespace IterationStatements
             
             //-----START HERE------------------------------------------
 
+            int num = 0; // Initialize num to 0
+
             //TODO - Create a variable of type int and name it "num"
-            //TODO - Initialize the variable with a value of 0
-
-
+            //TODO - Initialize the variable with a value of 0.
 
             //TODO - Create a do-while loop using the existing brackets as a template.
             // The existing brackets are placeholders for your loop code.
@@ -28,8 +28,14 @@ namespace IterationStatements
             //    Hint: Use "numbers.Add(num);" to add the current value of "num" to the list.
 
             {
-                // Your code goes here
-                numbers.Add(/*num*/); //uncomment out `num` to add it to the collection "numbers"
+                do
+                {
+                    num++; // Increment Num by 1
+
+                    numbers.Add(num); // Add the current value of num to the list.
+
+                } while (num <= 100); // Continue the loop while num is less than or equal to 100
+                numbers.Add(num);
             } 
             //TODO - Continue the loop while "num" is less than 100
             
@@ -43,7 +49,10 @@ namespace IterationStatements
             //    Hint: You can copy how this was done in the do-while loop
 
             {
-                // Your code goes here
+                while (num < 200)
+                    num++; // Increment num by 1
+                    numbers.Add(num); // Add the current value of num to the list.
+                console.writeline(Increase);
             }
             
 
@@ -56,7 +65,10 @@ namespace IterationStatements
             // The existing brackets are placeholders for your loop code.
             // Inside this loop, print each number in "numbers".
             {
-                // Your code goes here
+                foreach (int number in numbers)
+                {
+                    Console.WriteLine(number); // Print each number in the list
+                }
             }
              
 
@@ -76,8 +88,8 @@ namespace IterationStatements
             // c) Decrement "i" by 1 in each iteration
 
             {
-                //TODO - Inside the loop, place numbers[i] inside of the Console.WriteLine() method
-                Console.WriteLine(numbers[i]); // Example placement of numbers[i] inside Console.WriteLine
+               for (int i = 199; i >= 0; i--) // Start from 199 and go down to 0
+                    Console.WriteLine(numbers[i]);
             }
 
             //------------End of exercise
